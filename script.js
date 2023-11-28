@@ -1,13 +1,19 @@
 let firstCard = 4
 let secondCard = 3
-let summary = firstCard + secondCard;
+let sum = firstCard + secondCard;
+let hasBlackJack = false
+let isAlive = true 
 
-if (summary === 21){
-    console.log("Blackjack ! You won the game ")
-    } else if (summary <21 ){
-        console.log ("Do you want to draw a new card")
+if (sum <= 20 ) {
+    console.log("Do you want to draw a new car?")
 
-    }
+}else if ( sum === 21){
+    console.log("You've got Blackjack!")
+    hasBlackJack = true
+    
+} else {
+    console.log ("Bust!")
+    isAlive = false
+}
 
-else if(summary > 21) {
-    console.log("You failed")}
+console.log(isAlive)
