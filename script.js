@@ -1,9 +1,13 @@
+
 let firstCard = 4
 let secondCard = 3
 let sum = firstCard + secondCard;
 let hasBlackJack = false
 let isAlive = true 
-
+let message = ""
+let messageEl = document.getElementById("message-el")
+console.log(messageEl)
+function startGame(){
 if (sum <= 20 ) {
     console.log("Do you want to draw a new car?")
 
@@ -16,4 +20,10 @@ if (sum <= 20 ) {
     isAlive = false
 }
 
-console.log(isAlive)
+    
+}
+
+messageEl.textContent = message
+
+
+
