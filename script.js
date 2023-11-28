@@ -24,3 +24,8 @@ function startGame() {
 
     messageEl.textContent = message;
 }
+
+function newCard() {
+    console.log("Drawing a new card from the deck")
+    let drawnCardValue = Math.floor(Math.random() * 13);
+}
