@@ -9,13 +9,14 @@ let messageEl = document.getElementById("message-el");
 let sumEl = document.getElementById("sum-el")
 let cardsEl = document.getElementById("cards-el")
 let newCardButton = document.getElementById("newCard"); 
-
-
 function startGame() {
     renderGame()
 }
 function renderGame() {
-    cardsEl.textContent = "Cards : " + cards[0] + " " + cards[1]              ;
+    cardsEl.textContent = "Cards : "
+    for(i = 0; i<cards; i++){
+        cardsEl.textContent += cards[i] + " "
+    }
     sumEl.textContent = "Sum: " + sum;
 
     if (sum <= 20) {
