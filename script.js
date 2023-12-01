@@ -53,12 +53,12 @@ function renderGame() {
 }
 
 function newCard() {
- 
- let additionalCard = getRandomCard();
- sum = sum + additionalCard;
- cards.push(additionalCard);
-
- 
- renderGame()
+ if (isAlive === true && hasBlackJack === false){
+    let card = getRandomCard()
+    let additionalCard = getRandomCard();
+    sum = sum + additionalCard;
+    cards.push(additionalCard);
+    renderGame()
+}
 }
 newCardButton.addEventListener("click", newCard);
